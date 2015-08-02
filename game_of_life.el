@@ -38,6 +38,6 @@
   "Convert BOARD coordinates X and Y into a 2-D vector accessor."
   (elt (elt board y) x))
 
-(provide 'game_of_life)
+(provide 'game-of-life)
 
 ;;; game_of_life.el ends here

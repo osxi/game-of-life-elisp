@@ -5,7 +5,7 @@
 
 ;;; Code:
 
-(load-file "game_of_life.el")
+(require 'game-of-life)
 
 (ert-deftest game-of-life-core-test ()
   "Tests game of life core survival rules."
@@ -21,8 +21,8 @@
                  [nil nil nil]]))
     (should (equal (count-neighbors board 1 1) 0))
     (let ((board-populated '[[t   nil nil]
-                           [nil t   nil]
-                           [nil nil nil]]))
+                             [nil t   nil]
+                             [nil nil nil]]))
       (should (equal (count-neighbors board-populated 1 1) 1)))
     (let ((board-crowded '[[t t t]
                            [t t t]
