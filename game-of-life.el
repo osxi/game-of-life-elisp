@@ -40,4 +40,4 @@
 
 (provide 'game-of-life)
 
-;;; game_of_life.el ends here
+;;; game-of-life.el ends here

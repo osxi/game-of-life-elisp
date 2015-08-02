@@ -29,6 +29,6 @@
                            [t t t]]))
       (should (equal (count-neighbors board-crowded 1 1) 8)))))
 
-(provide 'game_of_life_test)
+(provide 'game-of-life-test)
 
-;;; game_of_life_test.el ends here
+;;; game-of-life-test.el ends here
