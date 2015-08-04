@@ -7,6 +7,17 @@
 
 (require 'game-of-life)
 
+(ert-deftest game-of-life-lookup-xy-test ()
+  "Tests lookup-x-y function."
+  (let ((board '[[t nil t]
+                 [nil t nil]]))
+    (should (equal (lookup-x-y board 0 0) t))
+    (should (equal (lookup-x-y board 1 0) nil))
+    (should (equal (lookup-x-y board 2 0) t))
+    (should (equal (lookup-x-y board 0 1) nil))
+    (should (equal (lookup-x-y board 1 1) t))
+    (should (equal (lookup-x-y board 2 1) nil))))
+
 (ert-deftest game-of-life-core-test ()
   "Tests game of life core survival rules."
     (should (equal (should-live 1) nil))
